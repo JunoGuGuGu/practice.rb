@@ -27,3 +27,40 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+ben_wallet = 0
+brian_wallet = 0
+evan_wallet = 0
+anthony_wallet = 0
+
+for transaction in blockchain
+  puts transaction ["amount"]
+  if transaction ["from_user"] == "ben"
+    ben_wallet = ben_wallet - transaction ["amount"]
+  elsif transaction ["to_user"] == "ben"
+    ben_wallet = ben_wallet + transaction ["amount"]
+  end
+  if transaction ["from_user"] == "brian"
+    brian_wallet = brian_wallet - transaction ["amount"]
+  elsif transaction ["to_user"] == "brian"
+    brian_wallet = brian_wallet + transaction ["amount"]
+  end
+  if transaction ["from_user"] == "evan"
+    evan_wallet = evan_wallet - transaction ["amount"]
+  elsif transaction ["to_user"] == "evan"
+    evan_wallet = evan_wallet + transaction ["amount"]
+  end
+  if transaction ["from_user"] == "anthony"
+    anthony_wallet = anthony_wallet - transaction ["amount"]
+  elsif transaction ["to_user"] == "anthony"
+    anthony_wallet = anthony_wallet + transaction ["amount"]
+  end
+end
+
+puts "Ben's KelloggCoin balance is #{ben_wallet}"
+puts "Brian's KelloggCoin balance is #{brian_wallet}"
+puts "Evan's KelloggCoin balance is #{evan_wallet}"
+puts "Anthony's KelloggCoin balance is #{anthony_wallet}"
+
+
+
